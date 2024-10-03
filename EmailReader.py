@@ -230,39 +230,3 @@ class EmailProcessor:
         return self.final_dataframe
 
 
-#if __name__ == "__main__":
-#     date = '09022024'
-#     date1 = pd.to_datetime(date, format='%d%m%Y').strftime('%d %b %y')
-#     date2 = pd.to_datetime(date, format='%d%m%Y').strftime('%d/%m/%Y')
-#     date3 = pd.to_datetime(date, format='%d%m%Y').strftime('%d.%m.%Y')
-#     imap_server = "imap.secureserver.net"
-#     imap_user = "alprecon@hellobpcl.in"
-#     imap_password = "`130x6/8S{A'_b;"
-#     imap_port = '993'
-
-#     #RAZORPAY Payments Report: 09 Feb 24
-#     target_substring = f"Custom Payments Report: {date1}"
-#     outputpath = f"Custom Payments Report/{date}"
-#     # outputfileName = f"Payments Report_{date}.csv"
-
-#    #RAZORPAY Settlement Recon Report: 09 Feb 24
-#     target_substring = f"Custom Settlement Recon Report: {date1}"
-#     outputpath = f"Custom Settlement Recon Report/{date}"
-#     outputfileName = f"Settlement Report_{date}.csv"
-
-#     # ALP PROD P1 : ALP PROD P1 : STFC_Statement of Claim and Transaction Details 09/02/2024 10022024_0601AM
-#     target_substring = f"ALP PROD P1 : ALP PROD P1 : STFC_Statement of Claim and Transaction Details {date2}"
-#     outputpath = f"STFC_Statement Report/{date}"
-#     outputfileName = f"STFC_Statement Report_{date}.csv"
-
-#     # #BPC - ALP for the consumption happened on 09.02.2024, 10.02.2024 & 11.02.2024
-#     # target_substring = f"BPC - ALP for the consumption happened on {date3}"
-#     # outputpath = f"SFL_Statement Report/{date}"
-#     # outputfileName = f"SFL_Statement Report_{date}.csv"
-
-#     # Create an instance of the EmailProcessor class
-#     email_processor = EmailProcessor(imap_user, imap_password, imap_server, imap_port, target_substring, outputpath,outputfileName)
-#     # Call the method to search and process emails
-#     email_processor.search_and_process_emails()
-#     df = email_processor.get_combined_dataframe()
-#     print(df,len(df))
